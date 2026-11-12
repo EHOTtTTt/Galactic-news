@@ -1,0 +1,383 @@
+/* ==========================================
+   SITH PAGE
+========================================== */
+
+.sith-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 25px;
+}
+
+
+/* Кнопка возврата */
+
+.sith-back {
+    display: inline-block;
+    color: #a9c4e5;
+    text-decoration: none;
+    margin-bottom: 35px;
+    transition: color 0.2s ease;
+}
+
+.sith-back:hover {
+    color: #e05252;
+}
+
+
+/* Главный блок */
+
+.sith-intro {
+    text-align: center;
+    padding: 65px 25px;
+    background: linear-gradient(
+        135deg,
+        #171321,
+        #24131c,
+        #101a2b
+    );
+
+    border: 1px solid #54303a;
+    border-radius: 12px;
+    margin-bottom: 55px;
+}
+
+.sith-label {
+    color: #e05252;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.sith-intro h1 {
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.sith-intro p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #b5c1d2;
+    line-height: 1.8;
+}
+
+.sith-warning {
+    margin-top: 30px;
+    color: #e05252;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+
+/* Галерея */
+
+.sith-gallery-section h2 {
+    color: #ffffff;
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.sith-gallery-description {
+    color: #899db7;
+    margin-bottom: 30px;
+}
+
+.sith-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+
+/* Карточки */
+
+.sith-card {
+    background: #111d30;
+    border: 1px solid #293b54;
+    border-radius: 10px;
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.sith-card:hover {
+    transform: translateY(-5px);
+    border-color: #a83e4b;
+    box-shadow: 0 8px 25px rgba(180, 35, 35, 0.12);
+}
+
+.sith-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background: #080d18;
+    display: block;
+}
+
+.sith-card-caption {
+    padding: 20px;
+}
+
+.sith-card-caption h3 {
+    color: #e5eaf2;
+    margin-bottom: 10px;
+}
+
+.sith-card-caption p {
+    color: #91a8c4;
+    font-size: 14px;
+}
+
+
+/* Нижний блок */
+
+.sith-bottom {
+    text-align: center;
+    margin-top: 65px;
+    padding: 45px 20px;
+    border-top: 1px solid #293b54;
+}
+
+.sith-bottom h2 {
+    color: #e05252;
+    margin-bottom: 12px;
+}
+
+.sith-bottom p {
+    color: #91a8c4;
+    margin-bottom: 25px;
+}
+
+
+/* Кнопка */
+
+.sith-return-button {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #702c38;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+
+    transition: background 0.2s ease;
+}
+
+.sith-return-button:hover {
+    background: #963b4b;
+}
+
+
+/* Мобильная версия */
+
+@media (max-width: 650px) {
+
+    .sith-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .sith-intro {
+        padding: 45px 20px;
+    }
+
+    .sith-intro h1 {
+        font-size: 36px;
+    }
+
+    .sith-warning {
+        line-height: 1.7;
+    }
+
+}
+
+
+/* ==========================================
+   СЕКРЕТНЫЙ ДОКУМЕНТ R-004
+========================================== */
+
+.secret-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.88);
+
+    animation: secretFadeIn 0.3s ease;
+}
+
+.secret-window {
+    width: 100%;
+    max-width: 650px;
+    max-height: 85vh;
+    overflow-y: auto;
+
+    padding: 35px;
+
+    background: #0b1220;
+    border: 1px solid #a83e4b;
+    border-radius: 8px;
+
+    color: #c7d3e3;
+    box-shadow: 0 0 35px rgba(180, 35, 35, 0.2);
+}
+
+.secret-window h2 {
+    color: #e05252;
+    margin: 20px 0;
+}
+
+.secret-window p {
+    line-height: 1.7;
+    margin: 13px 0;
+}
+
+.secret-label {
+    color: #e05252;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.secret-window hr {
+    border: none;
+    border-top: 1px solid #293b54;
+    margin: 22px 0;
+}
+
+.secret-warning {
+    color: #e05252;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.secret-close {
+    display: block;
+    margin: 25px auto 0;
+    padding: 12px 22px;
+
+    background: #702c38;
+    border: none;
+    border-radius: 5px;
+
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.secret-close:hover {
+    background: #963b4b;
+}
+
+@keyframes secretFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#sith-secret-image {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+
+/* Финальные документы */
+
+.secret-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    animation: secretFadeIn 0.3s ease;
+}
+
+.secret-window {
+    width: 100%;
+    max-width: 650px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 35px;
+    background: #0b1220;
+    border: 1px solid #a83e4b;
+    border-radius: 8px;
+    color: #c7d3e3;
+    box-shadow: 0 0 35px rgba(180, 35, 35, 0.2);
+}
+
+.secret-window h2 {
+    color: #e05252;
+    margin: 20px 0;
+}
+
+.secret-window p {
+    line-height: 1.7;
+    margin: 13px 0;
+}
+
+.secret-window hr {
+    border: none;
+    border-top: 1px solid #293b54;
+    margin: 22px 0;
+}
+
+.secret-label {
+    color: #e05252;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.secret-warning {
+    color: #e05252;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.secret-link {
+    color: #e05252;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.secret-close {
+    display: block;
+    margin: 25px auto 0;
+    padding: 12px 22px;
+    background: #702c38;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.secret-close:hover {
+    background: #963b4b;
+}
+
+.empire-final-button {
+    background: #8d2020;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.empire-final-button:hover {
+    background: #c02b2b;
+}
+
+#sith-secret-image {
+    -webkit-user-select: none;
+    user-select: none;
+}
